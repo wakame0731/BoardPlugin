@@ -1,0 +1,17 @@
+name: 掲示板プラグイン
+main: board\Main
+version: 1.0.0
+api: [3.0.0, 3.0.0-alpha4]
+author: wakame0731
+description: 掲示板プラグイン
+
+commands:
+      sign:
+        description: set sign
+        usage: "Usage:/sign <message(42文字まで)>" 
+        permission: command.board.plugin
+
+permissions:
+  command.board.plugin : 
+    description: ""
+    default: true
