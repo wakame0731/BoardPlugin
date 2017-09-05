@@ -63,8 +63,8 @@ class Main extends PluginBase implements Listener{
             "Text4" => new StringTag("Text4", "By ".$player->getName())
         ]);
         $nbt->Creator = new StringTag("Creator", $player->getRawUniqueId());
-        $player->getLevel()->setBlock(new Vector3($x,$y,$z), Block::get(Block::SIGN_POST,0));
+        $player->getLevel()->setBlock(new Vector3($x,$y,$z), Block::get(Block::SIGN_POST,0),true);
         $sign=Tile::createTile(Tile::SIGN,$player->getLevel(), $nbt);
         $sign->spawnToAll();
     }
-}
+} 
