@@ -1,4 +1,4 @@
-name: 掲示板プラグイン
+name: BoardPlugin
 main: board\Main
 version: 1.0.0
 api: [3.0.0, 3.0.0-alpha4]
@@ -9,9 +9,19 @@ commands:
       sign:
         description: set sign
         usage: "Usage:/sign <message(42文字まで)>" 
-        permission: command.board.plugin
-
+        permission: command.board.all
+      board:
+        description: set message on board
+        usage: "Usage:/board <掲示板名> <message(42文字まで)>"
+        permission: command.board.all
+      regist:
+        description: register board
+        usage: "Usage:Regist"
+        permission: command.board.op
 permissions:
   command.board.plugin : 
+    description: ""
+    default: true
+  command.board.op:
     description: ""
     default: true
